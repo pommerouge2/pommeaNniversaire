@@ -1,0 +1,130 @@
+/* Réinitialisation des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mise en forme générale */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background-color: #d1e238;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#accueil.hero {
+    background-image: url('images/pandarouxallongé.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; /* L'image reste fixe en fond */
+    
+    min-height: 100vh;            /* Prend tout l'écran au minimum, s'agrandit si besoin */
+    padding: 100px 20px;          /* Espace de sécurité en haut/bas pour le défilement */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; 
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 40px;
+}
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+/* Pied de page */
+footer {
+    background-color: #d1e238;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* On applique aussi le fond semi-transparent pour que tout ton texte + vidéo soient lisibles */
+.hero-content {
+    z-index: 2; 
+    background: rgba(0, 0, 0, 0.6); /* Fond sombre pour bien faire ressortir le blanc et la vidéo */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;       /* Évite que le bloc colle aux bords sur téléphone */
+}
+
+.aNniversaire-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.video-responsive {
+    width: 100%;          /* Prend toute la largeur disponible sur mobile */
+    max-width: 500px;     /* Bloque sa taille sur grand écran (comme ton image) */
+    height: auto;         /* Garde les bonnes proportions */
+    display: block;       /* Permet de la centrer */
+    margin: 15px auto;    /* Ajoute de l'espace en haut/bas et la centre horizontalement */
+    border-radius: 8px;   /* Optionnel : arrondit un peu les angles pour le style */
+}
+
+
+
